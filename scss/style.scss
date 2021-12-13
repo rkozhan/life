@@ -1,0 +1,131 @@
+@import "../src/scss/_null.scss";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,300,700,800);
+
+body {
+	background-color: #000;
+	font-family: Montserrat;
+	color: #fff;
+	font-size: 3vmin;
+	font-weight: 300;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.wrapper {
+	background-color: #222;
+	padding: 0 10%;
+	display: flex;
+	flex-direction: column;
+	opacity: 0;
+}
+.visible {
+	opacity: 1;
+}
+
+.bar,
+.menu {
+	display: flex;
+	height: 10vmin;
+	width: 80vmin;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	text-align: center;
+	.form {
+		display: flex;
+		align-items: center;
+		&__el {
+			line-height: 5vmin;
+			height: 5vmin;
+		}
+		&__input {
+			line-height: 5vmin;
+			height: 5vmin;
+			width: 10vmin;
+			background-color: #555;
+			color: #fff;
+			text-align: center;
+			&:active {
+				& ~ .form__btn {
+					border-bottom: 1px solid #fff;
+				}
+			}
+		}
+		&__btn {
+			line-height: 5vmin;
+			height: 5vmin;
+			color: #fff;
+			background-color: #222;
+		}
+	}
+}
+
+.bar {
+	.size {
+		visibility: hidden;
+		margin-right: 25px;
+	}
+	.message {
+		font-weight: 700;
+		text-align: center;
+		line-height: 100vh;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: #aaaaaa88;
+		font-size: 5vmin;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 1s ease 1s;
+	}
+	.show-message {
+		visibility: visible;
+		opacity: 1;
+		transition: all 0.5s ease 0s;
+	}
+}
+
+.btn {
+	padding: 0 10px;
+	line-height: 5vmin;
+	height: 5vmin;
+	cursor: pointer;
+	&:hover {
+		background-color: #111;
+	}
+}
+
+.field {
+	background-color: #000;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+.cell {
+	pointer-events: none;
+	background-color: #111;
+	border-radius: 50%;
+	//transition: background-color 3s ease 0s;
+	&:hover {
+		background-color: #333;
+		//transition: background-color 0.3s ease 0s;
+	}
+}
+.live {
+	background-color: green;
+	//transition: background-color 0.3s ease 0s;
+	&:hover {
+		background-color: greenyellow;
+		//transition: background-color 0.3s ease 0s;
+	}
+}
+
+.field.stop {
+	.cell {
+		pointer-events: all;
+		cursor: pointer;
+	}
+}

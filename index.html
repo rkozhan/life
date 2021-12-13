@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+	<!-------------------------------------------------------------------------------------------------------TITLE--------------------->
+	<title>Life</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<!-------------------------------------------------------------------------------------------------------FONTS--------------------->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap" rel="stylesheet" />
+
+
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper visible">
+		<div class="bar">
+			<form class="form size">
+				<div class="form__el">Size:
+				</div>
+				<input class="form__input size__height" value="31" type="number">
+				<div class="form__el">X
+				</div>
+				<input class="form__input width" value="31" type="number">
+				<div class="form__btn size__submit btn" type="submit">set</div>
+			</form>
+			<div class="message show-message">CONWAY'S GAME OF LIFE</div>
+			<div>steps: <span class="counter">0</span></div><span></span>
+		</div>
+		<div class="field stop">
+
+		</div>
+		<div class="menu">
+			<div class="btn start">Start</div>
+			<div class="btn step">+1 Step</div>
+			<div class="btn clear">Clear</div>
+			<form action="" class="form randomform">
+				<div class="form__btn btn random__btn">Random</div>
+				<input class="form__input random__proportion" value="4" type="number">
+			</form>
+		</div>
+	</div>
+	<!----------------------------------------SCRIPTS  ------------------------------------------------------------------------------>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
