@@ -1,51 +1,42 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-	<!-------------------------------------------------------------------------------------------------------TITLE--------------------->
-	<title>Life</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-	<!-------------------------------------------------------------------------------------------------------FONTS--------------------->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap" rel="stylesheet" />
-
-
-
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CONWAY'S GAME OF LIFE</title>
 </head>
-
 <body>
-	<div class="wrapper visible">
-		<div class="bar">
-			<form class="form size">
-				<div class="form__el">Size:
-				</div>
-				<input class="form__input size__height" value="31" type="number">
-				<div class="form__el">X
-				</div>
-				<input class="form__input width" value="31" type="number">
-				<div class="form__btn size__submit btn" type="submit">set</div>
-			</form>
-			<div class="message show-message">CONWAY'S GAME OF LIFE</div>
-			<div>steps: <span class="counter">0</span></div><span></span>
-		</div>
-		<div class="field stop">
+    <div class="menu">
+        <form action="">
+            <select name="field height" id="sizeY">
+                <option value=50>50</option>
+                <option value=100 selected>100</option>
+                <option value=150>150</option>
+                <option value=200>200</option>
+            </select>
+            <select name="field wigth" id="sizeX">
+                <option value=50>50</option>
+                <option value=100 selected>100</option>
+                <option value=150>150</option>
+                <option value=200>200</option>
+            </select>
+            <select name="preset" id="preset">
+                <option value="random" selected>Random</option>
+                <option value="glider">Glider</option>
+            </select>
+            <button type="submit">Apply</input>
+        </form>
+    </div>
+    <div class="field"></div>
+    <div class="menu">
+        <button id="start">Start</button>
+        <button id="nextGen">Next generation</button>
+        <div>Generation: <span id="counter">0</span></div>
+    </div>
+    
 
-		</div>
-		<div class="menu">
-			<div class="btn start">Start</div>
-			<div class="btn step">+1 Step</div>
-			<div class="btn clear">Clear</div>
-			<form action="" class="form randomform">
-				<div class="form__btn btn random__btn">Random</div>
-				<input class="form__input random__proportion" value="4" type="number">
-			</form>
-		</div>
-	</div>
-	<!----------------------------------------SCRIPTS  ------------------------------------------------------------------------------>
-
-	<script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
